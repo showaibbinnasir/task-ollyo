@@ -3,9 +3,10 @@
 }
 
 .hoverItem:nth-child(1){
-    width: 500px;
-    height: 500px;
+    width: 425px;
+    height: 425px;
     grid-row: span 2;
+    grid-column: span 2;
 }
 .hoverItem:nth-child(10){
    

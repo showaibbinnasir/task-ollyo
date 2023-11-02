@@ -49,7 +49,7 @@ function App() {
     }
 
     //checking inactive data condition and update array
-    if(activeData == false) {
+    if (activeData == false) {
       let newData = [...checkData];
       newData.pop()
       setCheckData(newData)
@@ -67,20 +67,22 @@ function App() {
 
   return (
     <div>
-      
-        
-      
+
+
+
       <div className='flex m-5'>
         {
           checkData.length == 0 ? <h1 className='text-2xl'>Gallery</h1> : <h1 className='bg-blue-700 text-white px-3 py-2 rounded-xl'>Selected({checkData.length}) </h1>
         }
       </div>
 
-      <div className='firstProduct px-5'>
-        {
-          //mapping image data and passing as props into Product component
-          data.map((image, index) => <Product index={index} dragItem={dragItem} dragOverItem={dragOverItem} handleSort={handleSort} handleCheck={handleCheck} key={index} data={image}></Product>)
-        }
+      <div className='flex justify-center'>
+        <div className='firstProduct px-5'>
+          {
+            //mapping image data and passing as props into Product component
+            data.map((image, index) => <Product index={index} dragItem={dragItem} dragOverItem={dragOverItem} handleSort={handleSort} handleCheck={handleCheck} key={index} data={image}></Product>)
+          }
+        </div>
       </div>
     </div>
   )
