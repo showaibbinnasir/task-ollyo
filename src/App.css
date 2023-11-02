@@ -1,0 +1,21 @@
+.firstProduct{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+.responsive{
+  display: none;
+}
+
+
+@media only screen and (max-width:668px){
+  div{
+    display: none;
+  }
+  
+}
+@media only screen and (min-Width:669px) and (max-width:900px){
+  div{
+    display: none;
+  }
+}

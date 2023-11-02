@@ -1,0 +1,21 @@
+.hoverItem{
+    transition: all .5s;
+}
+
+.hoverItem:nth-child(1){
+    width: 500px;
+    height: 500px;
+    grid-row: span 2;
+}
+.hoverItem:nth-child(10){
+   
+    
+}
+
+.hoverItem:hover{
+    background-color: gray;
+    opacity: 40%;
+    cursor: move;
+    scale: 101%;
+    
+}
