@@ -55,24 +55,26 @@ function App() {
       setCheckData(newData)
     }
   }
-  console.log(checkData);
-  // const onDragStart = (e, index) => {
-  //   console.log("Drag started",index);
-  // }
-  // const onDragEnter = (e, index) => {
-  //   console.log("Drag entered",index);
-  // }
+  
+  //handling delete button
+  
+  const handleDetele = ()=>{
+    let copyoftotaldata = [...data];
+    let copyofcheckeddata = [...checkData];
+    const deleteabledata = copyoftotaldata.filter(item => !copyofcheckeddata.includes(item))
+    setData(deleteabledata);
 
-
+  }
 
   return (
     <div>
 
-
-
-      <div className='flex m-5'>
+      <div className='flex mx-24 my-10 justify-between'>
         {
           checkData.length == 0 ? <h1 className='text-2xl'>Gallery</h1> : <h1 className='bg-blue-700 text-white px-3 py-2 rounded-xl'>Selected({checkData.length}) </h1>
+        }
+        {
+          checkData.length == 0 ? <h1 className='text-2xl'></h1> : <h1 onClick={handleDetele} className='bg-red-700 text-white px-3 py-2 rounded-xl'>Delete Items </h1>
         }
       </div>
 
